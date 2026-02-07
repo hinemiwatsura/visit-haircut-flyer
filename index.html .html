@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="ja" data-theme="light" style=""><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>訪問ヘアカットさくま チラシ</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&amp;family=Noto+Sans+JP:wght@400;500;700&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+      /* Base Reset & Typography for Print/Document feel */
+      * {
+        box-sizing: border-box;
+      }
+      
+      body {
+        font-family: 'Noto Sans JP', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        background-color: #fff;
+        color: #000;
+        line-height: 1.4;
+        width: 210mm; /* A4 width */
+        height: 297mm; /* A4 height */
+        margin: 0 auto;
+        padding: 10mm 12mm; /* A4 margins - reduced */
+        position: relative;
+        background-image: none;
+      }
+
+      /* Color Palette - Grayscale for B&W printing */
+      :root {
+        --primary-color: #000000; /* Black for main text */
+        --secondary-color: #333333; /* Dark gray */
+        --accent-color: #f5f5f5; /* Very light gray background */
+        --text-dark: #000000;
+        --text-light: #444444;
+        --white: #ffffff;
+        --border-color: #666666;
+      }
+      
+      /* Print optimization */
+      @media print {
+        body {
+          width: 210mm;
+          height: 297mm;
+          margin: 0;
+          padding: 12mm 15mm;
+        }
+        @page {
+          size: A4;
+          margin: 0;
+        }
+      }
+
+      /* Header Section */
+      header {
+        text-align: center;
+        border-bottom: 3px solid var(--primary-color);
+        padding-bottom: 12px;
+        margin-bottom: 15px;
+      }
+
+      .target-audience {
+        background-color: #000;
+        color: #fff;
+        display: inline-block;
+        padding: 6px 20px;
+        border-radius: 20px;
+        font-size: 0.85rem;
+        font-weight: bold;
+        margin-bottom: 12px;
+      }
+
+      h1 {
+        font-family: 'Noto Serif JP', serif;
+        color: var(--primary-color);
+        font-size: 2.2rem;
+        margin-bottom: 8px;
+        line-height: 1.2;
+        letter-spacing: 0.05em;
+        font-weight: 700;
+      }
+
+      .main-headline {
+        font-size: 1.1rem;
+        color: var(--text-dark);
+        font-weight: 700;
+        margin-bottom: 8px;
+        border: 2px solid var(--primary-color);
+        padding: 6px 12px;
+        display: inline-block;
+      }
+
+      .description {
+        font-size: 0.85rem;
+        color: var(--text-dark);
+        max-width: 85%;
+        margin: 0 auto;
+        line-height: 1.5;
+      }
+
+      /* Section Styling */
+      section {
+        margin-bottom: 15px;
+      }
+
+      h2 {
+        color: var(--primary-color);
+        font-size: 1.1rem;
+        border-left: 6px solid var(--primary-color);
+        padding-left: 10px;
+        margin-bottom: 12px;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        font-weight: 700;
+        background-color: #f0f0f0;
+        padding: 8px 10px;
+      }
+
+      h2 i {
+        color: var(--primary-color);
+      }
+
+      /* Features Grid */
+      .features-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+      }
+
+      .feature-item {
+        background-color: #fff;
+        border: 2px solid #000;
+        padding: 15px;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+
+      .feature-icon {
+        background-color: #000;
+        color: #fff;
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.1rem;
+        flex-shrink: 0;
+      }
+
+      .feature-text {
+        font-weight: bold;
+        color: var(--primary-color);
+        font-size: 0.95rem;
+        line-height: 1.4;
+      }
+
+      /* Service & Pricing */
+      .service-pricing-container {
+        display: flex;
+        gap: 20px;
+      }
+
+      .service-box,
+      .pricing-box {
+        flex: 1;
+        border: 3px solid #000;
+        border-radius: 5px;
+        padding: 15px;
+        background-color: #fff;
+      }
+
+      .price-highlight {
+        font-size: 2rem;
+        color: var(--primary-color);
+        font-weight: bold;
+        text-align: center;
+        margin: 6px 0;
+        font-family: 'Noto Serif JP', serif;
+      }
+
+      .price-unit {
+        font-size: 0.9rem;
+        color: var(--text-dark);
+      }
+
+      .price-note {
+        font-size: 0.85rem;
+        color: var(--text-dark);
+        text-align: center;
+        line-height: 1.5;
+      }
+
+      /* Area & Contact */
+      .info-grid {
+        display: grid;
+        grid-template-columns: 1fr 1.5fr;
+        gap: 12px;
+        background-color: #fff;
+        color: #000;
+        border: 3px solid #000;
+        border-radius: 5px;
+        padding: 15px;
+        margin-top: 12px;
+      }
+
+      .area-info h3,
+      .contact-info h3 {
+        color: #000;
+        font-size: 1.1rem;
+        margin-bottom: 12px;
+        border-bottom: 2px solid #000;
+        padding-bottom: 8px;
+        font-weight: 700;
+      }
+
+      .contact-phone {
+        font-size: 1.7rem;
+        font-weight: bold;
+        color: #000;
+        display: block;
+        margin: 6px 0;
+        font-family: 'Noto Sans JP', sans-serif;
+        letter-spacing: 2px;
+      }
+
+      .contact-phone i {
+        font-size: 1.6rem;
+        margin-right: 8px;
+      }
+
+      .contact-hours {
+        background-color: #f0f0f0;
+        display: inline-block;
+        padding: 5px 12px;
+        border-radius: 3px;
+        font-size: 0.85rem;
+        border: 2px solid #000;
+      }
+
+      /* Footer */
+      footer {
+        margin-top: 15px;
+        text-align: center;
+        font-size: 0.75rem;
+        color: var(--text-dark);
+        border-top: 2px solid #000;
+        padding-top: 12px;
+      }
+
+      /* Utility */
+      .highlight-text {
+        color: #000;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body style="">
+    <header>
+      <div class="target-audience">介護施設・病院・福祉施設様向け</div>
+      <h1>訪問ヘアカット さくま</h1>
+      <div class="main-headline">施設内で行う、安心の訪問ヘアカット</div>
+      <p class="description"><span style="font-size: 14px;">外出が難しい利用者様のために、美容師が施設へ伺いカットから後片付けまで行います。</span></p>
+    </header>
+
+    <section>
+      <h2><i class="fas fa-cut"></i> サービス内容・料金</h2>
+      <div class="service-pricing-container">
+        <div class="pricing-box">
+          <h3 style="color: #000; font-size: 1.1rem; margin-bottom: 12px; text-align: center; border-bottom: 3px solid #000; padding-bottom: 8px; font-weight: 700;"><i class="fas fa-building"></i> 施設様向け</h3>
+          <div style="text-align: center">
+            <p style="font-weight: bold; margin-bottom: 5px; font-size: 1.1rem">ヘアカット</p>
+            <div class="price-highlight">2,000<span class="price-unit">円（税込）</span></div>
+            <p style="margin-bottom: 0; font-size: 0.85rem; color: #000">お一人様あたりの料金</p>
+          </div>
+          <hr style="margin: 12px 0; border-color: #333">
+          <p class="price-note">
+            <i class="fas fa-info-circle"></i>
+            複数名の対応も可能です。<br>人数やスケジュールなど、柔軟に対応いたします。
+          </p>
+        </div>
+        <div class="pricing-box">
+          <h3 style="color: #000; font-size: 1.1rem; margin-bottom: 12px; text-align: center; border-bottom: 3px solid #000; padding-bottom: 8px; font-weight: 700;"><i class="fas fa-home"></i> 在宅向け</h3>
+          <div style="text-align: center; margin-bottom: 15px;">
+            <p style="font-weight: bold; margin-bottom: 5px; font-size: 1.1rem">ヘアカット（市内）</p>
+            <div style="font-size: 1.9rem; color: #000; font-weight: bold; font-family: 'Noto Serif JP', serif;">3,000<span style="font-size: 0.85rem; color: #000">円</span></div>
+            <p style="margin-bottom: 0; font-size: 0.8rem; color: #000">消費税・出張費込み</p>
+          </div>
+          <hr style="margin: 12px 0; border-color: #333">
+          <div style="text-align: center;">
+            <p style="font-weight: bold; margin-bottom: 5px; font-size: 1.1rem">（市外・隣の市）</p>
+            <div style="font-size: 1.9rem; color: #000; font-weight: bold; font-family: 'Noto Serif JP', serif;">4,000<span style="font-size: 0.85rem; color: #000">円</span></div>
+            <p style="margin-bottom: 0; font-size: 0.8rem; color: #000">消費税・出張費込み</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="info-grid">
+        <div class="area-info">
+          <h3><i class="fas fa-map-marker-alt"></i> 対応エリア</h3>
+          <p style="font-size: 1.2rem; font-weight: bold">白石市周辺</p>
+          <p style="font-size: 0.9rem; color: #444;">（近隣地域につきましては応相談）</p>
+        </div>
+        <div class="contact-info">
+          <h3><i class="fas fa-phone-alt"></i> お問い合わせ</h3>
+          <p style="margin-bottom: 5px">まずはお気軽にご連絡ください</p>
+          <span class="contact-phone"><i class="fas fa-mobile-alt"></i>090-1389-4792</span>
+          <div class="contact-hours">受付時間 10:00〜18:00</div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <p>※施設様の方針・安全基準・感染症対策を最優先に対応いたします。</p>
+      <p style="margin-top: 10px; font-weight: bold; font-size: 0.9rem;">訪問ヘアカット さくま</p>
+      <p style="margin-top: 5px; font-weight: bold;"><br></p>
+    </footer>
+  
+
+</body></html>
